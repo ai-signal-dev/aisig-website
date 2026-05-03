@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AISIG – AI信号判定デバイス｜視覚障害者の安全な歩行をサポート</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">AISIG</a>
+      <ul class="nav-links">
+        <li><a href="#features">機能</a></li>
+        <li><a href="#specs">スペック</a></li>
+        <li><a href="#awards">受賞歴</a></li>
+        <li><a href="#media">メディア</a></li>
+        <li><a href="#videos">動画</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-nav" style="display:none">購入する</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- モバイルメニュー -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#features" onclick="closeMobile()">機能</a></li>
+      <li><a href="#specs" onclick="closeMobile()">スペック</a></li>
+      <li><a href="#awards" onclick="closeMobile()">受賞歴</a></li>
+      <li><a href="#media" onclick="closeMobile()">メディア</a></li>
+      <li><a href="#videos" onclick="closeMobile()">動画</a></li>
+      <li><a href="#faq" onclick="closeMobile()">FAQ</a></li>
+      <li><a href="#contact" onclick="closeMobile()" style="display:none">購入する</a></li>
+    </ul>
+  </div>
+
+  <!-- クラウドファンディングバナー -->
+  <div class="cf-banner" id="cfBanner">
+    <div class="cf-banner-inner">
+      <span class="cf-badge">LIVE</span>
+      <span class="cf-text">クラウドファンディング実施中！ 目標達成率 <strong>30%</strong> ── 残り <strong id="cfDays">--</strong>日</span>
+      <a href="https://camp-fire.jp/projects/877524/view" class="cf-btn" target="_blank" rel="noopener">支援する →</a>
+    </div>
+    <button class="cf-close" onclick="closeCfBanner()" aria-label="閉じる">✕</button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-orb orb1"></div>
+      <div class="hero-orb orb2"></div>
+      <div class="hero-orb orb3"></div>
+    </div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="hero-badge">NEW RELEASE 2026</span>
+        <h1 class="hero-title">
+          信号の色を、<br />
+          <span class="gradient-text">振動で伝える。</span>
+        </h1>
+        <p class="hero-sub">
+          AISIGは、AIカメラが歩行者用信号機の赤・青をリアルタイムで判定し、<br />
+          振動パターンで視覚障害者に伝える、まったく新しい歩行支援デバイスです。
+        </p>
+        <div class="hero-cta">
+          <a href="https://camp-fire.jp/projects/877524/view" class="btn btn-primary" target="_blank" rel="noopener">クラウドファンディングを応援</a>
+          <a href="#features" class="btn btn-ghost">詳しく見る</a>
+        </div>
+      </div>
+      <div class="hero-device">
+        <img src="main01.png" alt="AISIGデバイス" class="hero-device-img" />
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>スクロール</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ブランドバー -->
+  <div class="brand-bar">
+    <div class="brand-bar-inner">
+      <span>AIリアルタイム信号判定</span>
+      <span class="dot">·</span>
+      <span>振動フィードバック</span>
+      <span class="dot">·</span>
+      <span>オンデバイス処理</span>
+      <span class="dot">·</span>
+      <span>軽量コンパクト設計</span>
+      <span class="dot">·</span>
+      <span>長時間バッテリー</span>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FEATURES</span>
+        <h2>AISIGの仕組み</h2>
+        <p>カメラで見て、AIで判断し、振動で伝える。</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card feature-tall">
+          <h3>AIによるリアルタイム信号判定</h3>
+          <p>内蔵カメラが歩行者用信号機を捉え、独自の画像認識AIが赤・青を0.1秒以内に判定。夜間・逆光・悪天候など、あらゆる環境に対応します。</p>
+          <img src="scene01.png" alt="AIによるリアルタイム信号判定" class="feature-img" />
+        </div>
+        <div class="feature-card">
+          <h3>振動パターンで色を伝達</h3>
+          <p>青信号は短い振動を連続で、赤信号は長い振動で通知。直感的に判別できる振動パターンで、視覚に頼らず信号の色を把握できます。</p>
+          <img src="scene02.png" alt="振動パターンで色を伝達" class="feature-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlight -->
+  <section class="highlight">
+    <div class="container highlight-inner">
+      <div class="highlight-text">
+        <span class="section-tag">PERFORMANCE</span>
+        <h2>0.5秒で判定。<br /><span class="gradient-text">迷わず、渡れる。</span></h2>
+        <p>AISIGの画像認識AIは、信号機を捉えた瞬間に色を判定。振動フィードバックまでのタイムラグはわずか0.5秒。安全な横断をリアルタイムでサポートします。</p>
+        <a href="#specs" class="btn btn-primary">スペックを見る</a>
+      </div>
+      <div class="highlight-stats">
+        <div class="stat">
+          <span class="stat-num">0.5<span class="stat-unit">秒</span></span>
+          <span class="stat-label">信号判定〜振動までの時間</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">85<span class="stat-unit">%</span></span>
+          <span class="stat-label">信号判定精度（開発中）</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3<span class="stat-unit">h</span></span>
+          <span class="stat-label">連続使用時間</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">85<span class="stat-unit">g</span></span>
+          <span class="stat-label">本体重量</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specs -->
+  <section class="specs" id="specs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">SPECIFICATIONS</span>
+        <h2>スペック</h2>
+        <p>信頼性と携帯性を両立した、現場で使えるスペック。</p>
+      </div>
+      <div class="specs-table-wrap">
+        <table class="specs-table">
+          <tbody>
+            <tr><th colspan="2" class="specs-category">AI・カメラ</th></tr>
+            <tr><td>画像認識エンジン</td><td>AISIG Vision AI v2（オンデバイス処理）</td></tr>
+            <tr><td>カメラ</td><td>広角 120° / F2.0 / 自動露出補正</td></tr>
+            <tr><td>判定速度</td><td>0.5秒以内（信号検出〜振動出力）</td></tr>
+            <tr><td>判定精度</td><td>85%（現在開発中）</td></tr>
+            <tr><td>対応環境</td><td>昼間・夜間・逆光・雨天・霧</td></tr>
+            <tr><th colspan="2" class="specs-category">振動フィードバック</th></tr>
+            <tr><td>青信号パターン</td><td>短振動 × 3回（0.2秒間隔）</td></tr>
+            <tr><td>赤信号パターン</td><td>長振動 × 1回（1.5秒）</td></tr>
+            <tr><td>振動強度</td><td>3段階調整可能</td></tr>
+            <tr><th colspan="2" class="specs-category">バッテリー・充電</th></tr>
+            <tr><td>バッテリー容量</td><td>400 mAh</td></tr>
+            <tr><td>連続使用時間</td><td>最大 3時間</td></tr>
+            <tr><td>充電方式</td><td>USB-C</td></tr>
+            <tr><th colspan="2" class="specs-category">本体</th></tr>
+            <tr><td>サイズ</td><td>95 × 45 × 18 mm</td></tr>
+            <tr><td>重量</td><td>85 g</td></tr>
+            <tr><td>素材</td><td>ABS + アルミニウムフレーム</td></tr>
+            <tr><td>防水・防塵</td><td>IP65</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">GALLERY</span>
+        <h2>ギャラリー</h2>
+        <p>手のひらに収まるコンパクトなボディに、信号判定AIを搭載。</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item g-large">
+          <img src="g01.jpg" alt="AISIGデバイス 正面ビュー" class="gallery-img" />
+        </div>
+        <div class="gallery-item">
+          <img src="g02.jpg" alt="AISIGデバイス 背面ビュー" class="gallery-img" />
+        </div>
+        <div class="gallery-item">
+          <img src="g03.jpg" alt="AISIGデバイス サイドビュー" class="gallery-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards & Media & YouTube -->
+  <section class="awards" id="awards">
+    <div class="container">
+
+      <!-- 受賞歴 -->
+      <div class="section-header">
+        <span class="section-tag">AWARDS</span>
+        <h2>受賞歴・コンテスト実績</h2>
+        <p>視覚障害者支援・AIテクノロジー分野で国内外から高い評価を受けています。</p>
+      </div>
+      <div class="awards-grid">
+        <a class="award-card" href="https://gugen.jp/result/2022.html" target="_blank" rel="noopener">
+          <div class="award-year">2022</div>
+          <div class="award-org">GUGEN2022</div>
+          <h3>グランプリ受賞<br />HAXTokyo賞・Windgraphy賞</h3>
+          <p>ハードウェアコンテスト「GUGEN2022」にてグランプリを受賞。あわせてHAXTokyo賞・Windgraphy賞も獲得。</p>
+        </a>
+        <a class="award-card" href="https://www.jamesdysonaward.org/ja-JP/2023/project/aisig" target="_blank" rel="noopener">
+          <div class="award-year">2023</div>
+          <div class="award-org">The James Dyson Award 2023</div>
+          <h3>国内最優秀賞<br />国際TOP20選出</h3>
+          <p>世界的なデザインエンジニアリングコンテスト「The James Dyson Award 2023」にて国内最優秀賞を受賞、国際TOP20にも選出。</p>
+        </a>
+        <div class="award-card">
+          <div class="award-year">2022</div>
+          <div class="award-org">品川ビジネス創造コンテスト2022</div>
+          <h3>第一三共賞・奨励賞</h3>
+          <p>品川ビジネス創造コンテスト2022にて第一三共賞および奨励賞を受賞。社会課題解決への取り組みが高く評価された。</p>
+        </div>
+      </div>
+
+      <!-- メディア掲載 -->
+      <div class="media-section" id="media">
+        <div class="section-header" style="margin-top: 100px;">
+          <span class="section-tag">MEDIA</span>
+          <h2>メディア掲載・出演</h2>
+          <p>視覚障害者支援AIデバイスとして、国内外の主要メディアに取り上げられています。</p>
+        </div>
+        <div class="media-logos">
+          <div class="media-logo">テレビ朝日</div>
+          <div class="media-logo"><a href="https://rikejyo-rin.com/jda/" target="_blank" rel="noopener">リケジョ RIN</a></div>
+          <div class="media-logo"><a href="https://gakumado.mynavi.jp/gmd/articles/69128" target="_blank" rel="noopener">マイナビ学生の窓口</a></div>
+          <div class="media-logo">PR TIMES</div>
+        </div>
+        <div class="media-articles">
+          <a class="media-article" href="https://www.youtube.com/watch?v=DZ0lwzfL1mA" target="_blank" rel="noopener">
+            <div class="article-source">テレビ朝日</div>
+            <h4>「発進！ミライクリエイター」番組未公開トーク</h4>
+            <p>視覚障害者の横断歩道問題をAIで解決するAISIGが、テレビ朝日の未来を創る若者を特集する番組に取り上げられた。</p>
+            <div class="article-date">テレビ朝日</div>
+          </a>
+          <a class="media-article" href="https://rikejyo-rin.com/jda/" target="_blank" rel="noopener">
+            <div class="article-source">リケジョ RIN</div>
+            <h4>「信号の色を振動で伝える — 視覚障害者支援デバイスAISIGの挑戦」</h4>
+            <p>理系女子・エンジニアに向けたメディア「リケジョ RIN」にて、AISIGの開発ストーリーと社会的意義が紹介された。</p>
+            <div class="article-date">リケジョ RIN</div>
+          </a>
+          <a class="media-article" href="https://gakumado.mynavi.jp/gmd/articles/69128" target="_blank" rel="noopener">
+            <div class="article-source">マイナビ学生の窓口</div>
+            <h4>「学生発・社会課題解決プロジェクト — AISIGが目指す誰もが歩ける街」</h4>
+            <p>大学発スタートアップとして注目を集めるAISIGチームの取り組みが、学生向けメディアで特集された。</p>
+            <div class="article-date">マイナビ学生の窓口</div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- YouTube -->
+  <section class="youtube-section" id="videos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">VIDEOS</span>
+        <h2>公式動画</h2>
+        <p>デモ映像・開発ストーリー・実際の使用シーンをご覧ください。</p>
+      </div>
+      <div class="youtube-single">
+        <div class="yt-card">
+          <div class="yt-thumb">
+            <div class="yt-thumb-placeholder" onclick="loadYT(this, 'mVFHSGOJtoE')">
+              <div class="yt-play-btn">▶</div>
+              <span class="yt-thumb-label">クリックして再生</span>
+            </div>
+          </div>
+          <div class="yt-info">
+            <h4>AISIG 公式PV — AIが信号の色を判定し、振動で伝える</h4>
+            <a href="https://youtu.be/mVFHSGOJtoE" target="_blank" rel="noopener" class="yt-link">
+              YouTubeで見る →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2>よくある質問</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            AISIGはどこで購入・入手できますか？
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <p>現在CAMPFIREにてクラウドファンディングを実施中です。支援いただいた資金をもとに開発を進め、2027年度に製品をお届けする予定です。正式販売後は公式サイトでもご案内します。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            音響信号機がない場所でも使えますか？
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <p>はい、それがAISIGの最大の特長です。全国の信号機のうち音響信号機は約10%程度しか設置されていません。AISIGはどの横断歩道でも信号の色を判定できます。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            インターネット接続は必要ですか？
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <p>不要です。すべての画像認識・判定処理はデバイス内で完結するため、通信環境がない場所でも安定して動作します。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            使い方は難しいですか？
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <p>電源を入れてカメラを信号機に向けるだけです。加速度センサで白杖の状態を判定し、横断歩道につくと自動的に画像認識を開始します。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            支援金はどのように使われますか？
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <p>試作・改良費、AI認識精度の向上、安全性・品質検証、量産に向けた準備に使用します。「試作品」から「実際に使える製品」へ進めるための資金です。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section class="contact" id="contact">
+    <div class="contact-bg">
+      <div class="hero-orb orb1"></div>
+      <div class="hero-orb orb2"></div>
+    </div>
+    <div class="container contact-inner">
+      <span class="section-tag">GET STARTED</span>
+      <h2>AISIGを、<span class="gradient-text">応援しよう。</span></h2>
+      <p>クラウドファンディング、製品情報のお問い合わせはこちらから。</p>
+      <div class="contact-cta">
+        <a href="https://camp-fire.jp/projects/877524/view" class="btn btn-primary btn-large" target="_blank" rel="noopener">クラウドファンディングを支援する</a>
+        <a href="#" class="btn btn-ghost btn-large">お問い合わせ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">AISIG</span>
+        <p>AIが信号の色を判定し、<br />振動で視覚障害者に伝える。</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>製品</h4>
+          <ul>
+            <li><a href="#features">機能</a></li>
+            <li><a href="#specs">スペック</a></li>
+            <li><a href="#gallery">ギャラリー</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>実績</h4>
+          <ul>
+            <li><a href="#awards">受賞歴</a></li>
+            <li><a href="#media">メディア</a></li>
+            <li><a href="#videos">動画</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>サポート</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="#">修理・保証</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 AISIG. All rights reserved.</p>
+      <div class="footer-legal" style="display:none">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
