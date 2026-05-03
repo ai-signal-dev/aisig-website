@@ -847,10 +847,12 @@ body.cf-visible .hero { padding-top: 160px; }
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: #000;
+  background: linear-gradient(135deg, #f0f0ff, #e8f4ff);
   cursor: pointer;
   transition: var(--transition);
 }
+
+.yt-thumb-placeholder:hover { background: linear-gradient(135deg, #e8e8ff, #ddf0ff); }
 
 .yt-thumb-placeholder:hover .yt-play-btn { transform: scale(1.1); }
 
