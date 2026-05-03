@@ -847,28 +847,26 @@ body.cf-visible .hero { padding-top: 160px; }
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: linear-gradient(135deg, #f0f0ff, #e8f4ff);
+  background: #000;
   cursor: pointer;
   transition: var(--transition);
 }
 
-.yt-thumb-placeholder:hover { background: linear-gradient(135deg, #e8e8ff, #ddf0ff); }
+.yt-thumb-placeholder:hover .yt-play-btn { transform: scale(1.1); }
 
 .yt-play-btn {
-  width: 52px;
-  height: 52px;
+  width: 64px;
+  height: 64px;
   background: #ff0000;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 16px rgba(255,0,0,0.3);
+  font-size: 1.4rem;
+  box-shadow: 0 4px 20px rgba(255,0,0,0.5);
   transition: var(--transition);
 }
-
-.yt-thumb-placeholder:hover .yt-play-btn { transform: scale(1.1); }
 
 .yt-thumb-label {
   font-size: 0.72rem;
