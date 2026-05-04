@@ -94,3 +94,54 @@ revealEls.forEach(el => {
   el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
   observer.observe(el);
 });
+
+// ===== GALLERY SLIDER =====
+let currentSlide = 0;
+const slider = document.getElementById('gallerySlider');
+const slides = slider ? slider.querySelectorAll('.slide') : [];
+const dotsContainer = document.getElementById('sliderDots');
+
+if (slides.length > 0) {
+  // ドット生成
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `スライド${i + 1}`);
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+  });
+}
+
+function goToSlide(index) {
+  currentSlide = (index + slides.length) % slides.length;
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  document.querySelectorAll('.slider-dot').forEach((d, i) => {
+    d.classList.toggle('active', i === currentSlide);
+  });
+}
+
+function slideMove(dir) {
+  goToSlide(currentSlide + dir);
+}
+
+// ===== LIGHTBOX =====
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+
+document.querySelectorAll('.lightbox-trigger').forEach(img => {
+  img.addEventListener('click', () => {
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLightbox();
+});

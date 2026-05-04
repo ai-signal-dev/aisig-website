@@ -186,12 +186,12 @@
         <div class="feature-card feature-tall">
           <h3>AIによるリアルタイム信号判定</h3>
           <p>内蔵カメラが歩行者用信号機を捉え、独自の画像認識AIが赤・青を0.1秒以内に判定。夜間・逆光・悪天候など、あらゆる環境に対応します。</p>
-          <img src="scene01.png" alt="AIによるリアルタイム信号判定" class="feature-img" />
+          <img src="scene01.png" alt="AIによるリアルタイム信号判定" class="feature-img lightbox-trigger" />
         </div>
         <div class="feature-card">
           <h3>振動パターンで色を伝達</h3>
           <p>青信号は短い振動を連続で、赤信号は長い振動で通知。直感的に判別できる振動パターンで、視覚に頼らず信号の色を把握できます。</p>
-          <img src="scene02.png" alt="振動パターンで色を伝達" class="feature-img" />
+          <img src="scene02.png" alt="振動パターンで色を伝達" class="feature-img lightbox-trigger" />
         </div>
       </div>
     </div>
@@ -271,16 +271,21 @@
         <h2>ギャラリー</h2>
         <p>手のひらに収まるコンパクトなボディに、信号判定AIを搭載。</p>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item g-large">
-          <img src="g01.JPG" alt="AISIGデバイス 正面ビュー" class="gallery-img" />
+      <div class="slider-wrap">
+        <div class="slider" id="gallerySlider">
+          <div class="slide">
+            <img src="g01.JPG" alt="AISIGデバイス 正面ビュー" class="slide-img lightbox-trigger" />
+          </div>
+          <div class="slide">
+            <img src="g02.JPG" alt="AISIGデバイス 背面ビュー" class="slide-img lightbox-trigger" />
+          </div>
+          <div class="slide">
+            <img src="g03.JPG" alt="AISIGデバイス サイドビュー" class="slide-img lightbox-trigger" />
+          </div>
         </div>
-        <div class="gallery-item">
-          <img src="g02.JPG" alt="AISIGデバイス 背面ビュー" class="gallery-img" />
-        </div>
-        <div class="gallery-item">
-          <img src="g03.JPG" alt="AISIGデバイス サイドビュー" class="gallery-img" />
-        </div>
+        <button class="slider-btn slider-prev" onclick="slideMove(-1)" aria-label="前へ">&#8592;</button>
+        <button class="slider-btn slider-next" onclick="slideMove(1)" aria-label="次へ">&#8594;</button>
+        <div class="slider-dots" id="sliderDots"></div>
       </div>
     </div>
   </section>
@@ -520,6 +525,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- ライトボックス -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="閉じる">✕</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+  </div>
 
   <script src="script.js"></script>
 </body>
